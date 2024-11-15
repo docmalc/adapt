@@ -3,19 +3,11 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route("/get-user/<user_id>")
-#@app.route("/parseResume/<companyId>/<resumeUrl>")
-@app.route("/parseResume/<resume_url>")
-def get_user(resume_url):
-    
-    # Get resume from resumeUrl
-
-    # Parse resume for name, phone number, email
-
-    # Return parsedCandidateData
+def get_user(user_id):
     
     
     user_data = {
-        "user_id": resume_url,
+        "user_id": user_id,
         "name": "John Doe",
         "email": "john.doe@example.com"
     }
@@ -31,4 +23,4 @@ def get_user(resume_url):
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
